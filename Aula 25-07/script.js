@@ -3,9 +3,7 @@
     const productCardWith = 220;
     const listContainer = document.querySelector(".lista-produtos");
 
-/**
- * Gera na lista-produtos, elementos divs fantasmas de acordo a nescessidade.
-*/
+// Cria divs fantasmas para preencher os espaços vazios
 function addHiddenCards(){
     const cardsPerRow = Math.floor(
         listContainer.getBoundingClientRect().width / 220
@@ -21,9 +19,10 @@ function addHiddenCards(){
     }
 }
 
-/**
- * Remove os elementos div fantasmas gerados com a classe 'hidden'
- */
+addHiddenCards();
+
+// Remove as divs fantasmas criadas anteriormente caso aja alteração no tamaho da tela
+
  function removeHiddenCards(){
     const hiddenCards = document.querySelectorAll(".hidden");
 
@@ -33,47 +32,43 @@ function addHiddenCards(){
     }
 }
 
-addHiddenCards();
-
-/**
- * 
- */
 function resizeHandler(){
     removeHiddenCards();
     addHiddenCards();
 }
 
-window.onresize = () => resizeHandlerWithDebounce(300);
+window.onresize = () => resizeHandlerWithThrottling(5000);
 
 let timer;
 
-/**
- * Só será executar o throttling ao decorrer de um determinado periodo de tempo, por exemplo 500 milesegundos.
- * Qualquer evento mais rapido que o tempo determinado será ignorado, ou seja as chamadas a resizeHandler serão ignoradas.
- * 
- * A ideia que tive foi que com o timer criado, nós não reiniciamos o timer.
- */
-function resizeHandlerWithTrottling(debounceTime){
-    timer = setTimeout(() => {
+// O Throttling vai executar a função apenas depois de ter passado x tempo que houver o evento resize
+// Por exemplo: eu defini 1000 ms (1 segundo) para a execução do Throttling, portanto a partir do momento que eu
+// modificar o tamanho da minha tela ele vai esperar 1 segundo para poder executar a função novamente quando eu
+// der outro resize
+
+function resizeHandlerWithThrottling(throttleTime){
+    if(!timer){
+        timer = setTimeout(() => {
+            timer = null;
+        }, throttleTime);
         removeHiddenCards();
         addHiddenCards();
-        timer = null;
-    }, debounceTime);
-}
-
-/**
- * Será executado o debounce se passar o tempo sem ter um novo evento.
- * As chamadas ao resizeHandler serão executadas após um período de tempo sem ocorrencias de eventos
- */
-
-function resizeHandlerWithDebounce(debounceTime){
-    if(timer){
-        clearTimeout(timer);
+        console.log("Teste");
     }
-    
-    timer = setTimeout(() => {
-        removeHiddenCards();
-        addHiddenCards();
-        timer = null;
-    }, debounceTime);
 }
+
+// O debounce é executado após passar x tempo sem ter um novo evento, com isso após
+// modificar o tamanho da tela e parar a função será executada com base no último valor
+// do resize
+
+// function resizeHandlerWithDebounce(debounceTime){
+//     if(timer){
+//         clearTimeout(timer);
+//     }
+    
+//     timer = setTimeout(() => {
+//         removeHiddenCards();
+//         addHiddenCards();
+//         timer = null;
+//     }, debounceTime);
+// }
