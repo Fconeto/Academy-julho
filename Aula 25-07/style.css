@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: lightgray;
+    padding: 20px 50px;
+  }
+  
+  .secao-produtos {
+    background-color: white;
+    padding: 20px 10px;
+    margin-top: 20px;
+  }
+  
+  .lista-produtos {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+  
+  .produto {
+    flex-grow: 1;
+    flex-basis: 1px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    min-width: 200px;
+  }
+  
+  .hidden {
+    opacity: 0;
+    height: 0;
+  }
