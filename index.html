@@ -5,48 +5,33 @@
   <meta charset="UTF-8">
   <meta name="description" content="Exemplo de formulário de contato em html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="index.css" type="text/css">
+  <link rel="stylesheet" href="style.css" type="text/css">
   <title>Formulário de contato</title>
 
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .container {
-      position: relative;
-      width: 500px;
-    }
-
-    .content1 {
-      background-color: red;
-      width: 300px;
-      height: 300px;
-    }
-
-    .content2 {
-      background-color: green;
-      position: relative;
-      width: calc(100% - 700px);
-      height: 300px;
-      top: 0;
-      left: 100px;
-    }
-  </style>
+ 
 </head>
 
 <body>
-  <h1>Loja exemplo</h1>
-  <div class="secao-produtos">
-    <h2>Título da seção</h2>
-    <div>
-      <div class="lista-produtos">
-        <div class="produto">
-          <p>Produto 1</p>
-        </div>
-        <div class="produto">Produto 2</div>
-        <div class="produto">Produto 3</div>
-        <div class="produto">Produto 4</div>
-        <div class="produto">Produto 5</div>
-      </div>
-    </div>
+  <h1>Frutas</h1> <br>
+  <div class="quadrado azul">
+    <h3>Laranja</h3>
+    <button id="reduzirLaranja" onclick="reduzir('quantLaranja')" class="botao">-</button>
+    <span id="quantLaranja" class="quant">0</span>
+    <button id="aumentarLaranja" onclick="aumentar('quantLaranja')" class="botao">+</button>
+  </div>
+
+  <div class="quadrado vermelho">
+    <h3>Uva</h3>
+    <button id="reduzirLaranja" onclick="reduzir('quantUva')" class="botao">-</button>
+    <span id="quantUva" class="quant">0</span>
+    <button id="aumentarLaranja" onclick="aumentar('quantUva')" class="botao">+</button>
+  </div>
+
+  <div class="quadrado verde">
+    <h3>Laranja</h3>
+    <button id="reduzirLaranja" onclick="reduzir('quantBanana')" class="botao">-</button>
+    <span id="quantBanana" class="quant">0</span>
+    <button id="aumentarLaranja" onclick="aumentar('quantBanana')" class="botao">+</button>
   </div>
 
 

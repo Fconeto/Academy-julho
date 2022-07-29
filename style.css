@@ -2,40 +2,42 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-  
-  body {
-    background-color: lightgray;
-    padding: 20px 50px;
-  }
-  
-  .secao-produtos {
-    background-color: white;
-    padding: 20px 10px;
-    margin-top: 20px;
-  }
-  
-  .lista-produtos {
-    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.quadrado {
     display: flex;
-    flex-direction: row;
+    margin: 15px;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: flex-start;
-  }
-  
-  .produto {
-    flex-grow: 1;
-    flex-basis: 1px;
-    height: 300px;
+    align-items: center;
+    width: 100px;
+    height: 80px;
+    border-radius: 10px;
+    background-color: blue;
+}
+
+h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
-    min-width: 200px;
-  }
-  
-  .hidden {
-    opacity: 0;
-    height: 0;
-  }
+    width: 100%;
+}
+
+.botao {
+    min-width: 15px;
+    max-width: 15px;
+    margin: 5px;
+}
+
+.azul {
+    background-color: blue;
+}
+
+.vermelho {
+    background-color: red;
+}
+
+.verde {
+    background-color: green;
+}
