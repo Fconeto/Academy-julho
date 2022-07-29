@@ -1,0 +1,11 @@
+button {
+    background: red;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    cursor: pointer;
+  }
+  
+  button.habilitar {
+    background: green;
+  }

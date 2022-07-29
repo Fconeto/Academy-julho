@@ -3,40 +3,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Exemplo de formulário de contato em html">
+  <meta name="description" content="Manipulação do DOM">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css" type="text/css">
-  <title>Formulário de contato</title>
-
- 
+  <link rel="stylesheet" href="index.css" type="text/css">
+  <title>Manipulação do DOM</title>
 </head>
 
 <body>
-  <h1>Frutas</h1> <br>
-  <div class="quadrado azul">
-    <h3>Laranja</h3>
-    <button id="reduzirLaranja" onclick="reduzir('quantLaranja')" class="botao">-</button>
-    <span id="quantLaranja" class="quant">0</span>
-    <button id="aumentarLaranja" onclick="aumentar('quantLaranja')" class="botao">+</button>
-  </div>
+  <div id="root">
+    <h1>Lista de pokémons</h1>
+    <ul id="lista-pokemons">
 
-  <div class="quadrado vermelho">
-    <h3>Uva</h3>
-    <button id="reduzirLaranja" onclick="reduzir('quantUva')" class="botao">-</button>
-    <span id="quantUva" class="quant">0</span>
-    <button id="aumentarLaranja" onclick="aumentar('quantUva')" class="botao">+</button>
-  </div>
-
-  <div class="quadrado verde">
-    <h3>Laranja</h3>
-    <button id="reduzirLaranja" onclick="reduzir('quantBanana')" class="botao">-</button>
-    <span id="quantBanana" class="quant">0</span>
-    <button id="aumentarLaranja" onclick="aumentar('quantBanana')" class="botao">+</button>
-  </div>
-
-
-  <script src="script.js">  </script>
-
+    </ul>
+    <p id="count">Count: 0</p>
+    <button onclick="obterPokemons()">Obter Pokemons</button>
+    <script src="index.js"></script>
 </body>
 
 
