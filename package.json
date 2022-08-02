@@ -1,0 +1,22 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "commit com node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fconeto/Curso-Academy.git"
+  },
+  "author": "neto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fconeto/Curso-Academy/issues"
+  },
+  "homepage": "https://github.com/Fconeto/Curso-Academy#readme",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
