@@ -1,0 +1,32 @@
+
+form {
+    display: block;
+    margin: 15px 0;
+    width: 100%;
+    height: fit-content;
+}
+
+form * {
+    margin: 3px 0;
+
+}
+
+span {
+    font-size: 18px;
+}
+
+#title, #comment {
+    text-align: start;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+#title {
+    height: 35px;
+}
+
+#comment{
+    height: 100px;
+}
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Home">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="index.css" type="text/css">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/create_comment.css">
+</head >
+
+<body>
+  <header>
+    <div class="conteudo-header">
+      <h1 class="logo"><a href="index.html">My blog</a></h1>
+
+      <div class="user">
+        <input placeholder="User" type="email" name="usuario" id="email">
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+    <h2>Create a comment</h2>
+    <form action="post.html">
+      <span for="title">Title</span> <br>
+      <textarea placeholder="Type here..." name="title" id="title" cols="30" rows="5"></textarea> <br>
+      <span for="comment">Comment</span> <br>
+      <textarea placeholder="Type here..." name="comment" id="comment" cols="30" rows="10"></textarea> <br>
+      <button>Salvar</button>
+    </form>
+  </main>
+
+  <footer>
+    <span>Aqui é o footer</span>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
